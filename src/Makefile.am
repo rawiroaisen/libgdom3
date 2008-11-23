@@ -52,7 +52,7 @@ libgdom3_la_LIBADD = \
 	$(top_builddir)/gee/gee/libgee.la \
 	$(NULL)
 
-libgdom3_la_LDFLAGS = -version-info 0:0:0 -no-undefined
+libgdom3_la_LDFLAGS = -version-info 0:0:0 -no-undefined -release $(VERSION)
 
 vapidir = $(datadir)/vala/vapi
 

@@ -48,7 +48,7 @@ gdom3-1.0-gee.vapi gee.vala.stamp: $(libgee_la_VALASOURCES)
 libgee_la_LIBADD = \
 	$(GLIB_LIBS) \
 	$(NULL)
-libgee_la_LDFLAGS = -version-info 1:0:0 -no-undefined
+libgee_la_LDFLAGS = -version-info 1:0:0 -no-undefined -release $(VERSION)
 
 vapidir = $(datadir)/vala/vapi
 
