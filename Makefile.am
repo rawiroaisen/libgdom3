@@ -1,0 +1,12 @@
+NULL =
+SUBDIRS = gee dom
+
+AM_CPPFLAGS = \
+		$(NULL)
+
+EXTRA_DIST = \
+	$(NULL)
+
+DISTCLEANFILES = \
+	$(NULL)
+
