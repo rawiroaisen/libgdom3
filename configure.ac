@@ -1,4 +1,4 @@
-AC_INIT(libgdom3 [0.0.1], [rainwoodman@gmail.com], [libgdom3])
+AC_INIT(libgdom3, [0.0.1], [rainwoodman@gmail.com], [libgdom3])
 
 AM_INIT_AUTOMAKE([1.9 tar-ustar])
 AC_CONFIG_SRCDIR([Makefile.am])
@@ -26,12 +26,10 @@ AC_SUBST(GLIB_LIBS)
 AC_CONFIG_FILES([Makefile
 			gee/Makefile
            gee/gee/Makefile
-		   gee/dom-gee-1.0.pc
            gee/tests/Makefile
-		   dom/Makefile
-		   dom/gdom3-1.0.pc
-		   dom/dom/Makefile
-		   dom/tests/Makefile
+		   gdom3-1.0.pc
+		   src/Makefile
+		   tests/Makefile
 		   ])
 
 AC_OUTPUT

@@ -1,5 +1,5 @@
 NULL =
-SUBDIRS = gee dom
+SUBDIRS = gee src tests
 
 AM_CPPFLAGS = \
 		$(NULL)
