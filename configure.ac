@@ -10,7 +10,20 @@ AM_PROG_CC_C_O
 AC_DISABLE_STATIC
 AC_PROG_LIBTOOL
 
-AC_PATH_PROG(VALAC, valac, valac)
+# Check for Vala
+AC_SUBST(VALA_REQUIRED, [0.5.1])
+
+AC_CACHE_CHECK([checking for vala = $VALA_REQUIRED],
+		[ac_cv_path_VALAC],
+		[AC_PATH_PROGS_FEATURE_CHECK([VALAC], 
+			[valac valac [`pwd`/vala$PATH_SEPARATOR$PATH]],
+			[[
+			$ac_path_VALAC --version | grep $VALA_REQUIRED &&
+				ac_cv_path_VALAC=$ac_path_VALAC ac_path_VALAC_found=: 
+			]],
+			[AC_MSG_ERROR([could not find vala version $VALA_REQUIRED])]
+			)]
+		)
 AC_SUBST(VALAC)
 
 AC_SUBST(CFLAGS)

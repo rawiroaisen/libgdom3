@@ -82,5 +82,16 @@ namespace DOM {
 				_id_map.get(id) == element);
 			_id_map.remove(id);
 		}
+		public signal void changed();
+		/*
+	g_signal_new("hello",
+		DOM_TYPE_DOCUMENT,
+		G_SIGNAL_RUN_FIRST,
+		0,
+		NULL,
+		NULL,
+		g_cclosure_marshal_VOID__VOID,
+		G_TYPE_VOID, 0);
+		*/
 	}
 }
